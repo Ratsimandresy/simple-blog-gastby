@@ -1,10 +1,26 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/gatsby-config/
- */
-
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    {
+      resolev: "gatsby-source-fileSystem",
+      option: {
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
+      },
+    },
+    {
+      resolev: "gatsby-source-fileSystem",
+      option: {
+        name: `posts`,
+        path: `${__dirname}/src/posts`,
+      },
+    },
+    {
+      resolev: "gatsby-source-fileSystem",
+      option: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+  ],
 }
