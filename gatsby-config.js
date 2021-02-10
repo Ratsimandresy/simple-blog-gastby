@@ -3,23 +3,37 @@ module.exports = {
   plugins: [
     {
       resolev: "gatsby-source-fileSystem",
-      option: {
+      options: {
         name: `pages`,
         path: `${__dirname}/src/pages`,
       },
     },
     {
       resolev: "gatsby-source-fileSystem",
-      option: {
+      options: {
         name: `posts`,
         path: `${__dirname}/src/posts`,
       },
     },
     {
       resolev: "gatsby-source-fileSystem",
-      option: {
+      options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    {
+      resolve: `gastby-plugin-mdx`,
+      options: {
+        extension: [`.md`, `.mdx`],
+        gatsbyRemarkPligins: [
+          {
+            resolve: `gastby-remark-images`,
+            options: { maxWidth: 1200 },
+          },
+        ],
       },
     },
   ],
