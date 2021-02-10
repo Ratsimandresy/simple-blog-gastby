@@ -2,21 +2,21 @@ module.exports = {
   /* Your site config here */
   plugins: [
     {
-      resolev: "gatsby-source-fileSystem",
+      resolve: "gatsby-source-fileSystem",
       options: {
         name: `pages`,
         path: `${__dirname}/src/pages`,
       },
     },
     {
-      resolev: "gatsby-source-fileSystem",
+      resolve: "gatsby-source-fileSystem",
       options: {
         name: `posts`,
         path: `${__dirname}/src/posts`,
       },
     },
     {
-      resolev: "gatsby-source-fileSystem",
+      resolve: "gatsby-source-fileSystem",
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
@@ -25,12 +25,12 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {
-      resolve: `gastby-plugin-mdx`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
-        extension: [`.md`, `.mdx`],
-        gatsbyRemarkPligins: [
+        extensions: [`.md`, `.mdx`],
+        gatsbyRemarkPlugins: [
           {
-            resolve: `gastby-remark-images`,
+            resolve: `gatsby-remark-images`,
             options: { maxWidth: 1200 },
           },
         ],
